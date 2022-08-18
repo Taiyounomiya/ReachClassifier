@@ -26,3 +26,13 @@ def plt_to_pdf(figures, filename):
         for fig in figures:
             print(fig)
             pdf.savefig(fig)
+
+# Function for loading in dataframes into a journal
+def load_saved_csv_dataframes(path):
+    """ Utility function to load .csv format stored dataframes using Pandas.
+        :param path: path to file
+        :type path: str
+        :return dataframe: dataframe containing training, test, or pre-processed reaching data.
+        :type dataframe: pandas dataframe """
+    dataframe = pd.read_csv(path)
+    return dataframe
